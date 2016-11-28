@@ -23,3 +23,5 @@ deploy:
   on:
     repo: goeuro/myke
     tags: true
+notifications:
+  email: false
