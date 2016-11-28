@@ -1,0 +1,13 @@
+language: go
+go_import_path: github.com/goeuro/myke
+go:
+  - 1.7
+install:
+  - go get -u -v github.com/tools/godep
+  - go get -u -v github.com/mitchellh/gox
+  - go get -u -v github.com/jteeuwen/go-bindata/...
+  - godep restore -v
+  - godep get -v github.com/onsi/ginkgo/ginkgo
+script:
+  - ginkgo -r -v --trace --keepGoing
+  - bin/cross-compile.sh
