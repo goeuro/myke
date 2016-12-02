@@ -13,6 +13,13 @@ func main() {
 	app.Version = "0.3.1"
 	app.Usage = "make with yml"
 	app.Action = cmd.RunOrList
+	app.Flags = []cli.Flag {
+		cli.StringFlag{
+			 Name: "f, file",
+			 Value: "myke.yml",
+			 Usage: "`yml-file` to load",
+		},
+	}
 	app.Commands = []cli.Command{
 		cmd.ListCmd,
 		cmd.RunCmd,
