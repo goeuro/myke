@@ -9,5 +9,5 @@ tasks:
     cmd: echo {{.from|required}} {{.to|default "something_to"}}
     desc: run as myke template/args[from=...,to=...]
   file:
-    cmd: myke template template.tpl
+    cmd: myke --template template.tpl
     desc: run as myke template/file
