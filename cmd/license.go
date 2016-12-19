@@ -13,6 +13,6 @@ func License(c *cli.Context) error {
 		log.WithError(err).Fatal("error showing licenses")
 	}
 
-	fmt.Println(string(data))
+	fmt.Fprintln(c.App.Writer, string(data))
 	return nil
 }

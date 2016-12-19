@@ -4,14 +4,43 @@ import (
 	"gopkg.in/urfave/cli.v1"
 	"github.com/goeuro/myke/core"
 	"github.com/apex/log"
-	logcli "github.com/apex/log/handlers/cli"
 	"path/filepath"
 	"strings"
 	"os"
+	"io"
 )
 
+func NewApp(writer io.Writer) *cli.App {
+	app := cli.NewApp()
+	app.Name = "myke"
+	app.Version = Version()
+	app.Usage = "make with yml"
+	app.Action = Action
+	app.Writer = writer
+	app.Flags = []cli.Flag {
+		cli.StringFlag{
+			 Name: "f, file",
+			 Value: "myke.yml",
+			 Usage: "`yml-file` to load",
+		},
+		cli.StringFlag{
+			 Name: "template",
+			 Usage: "render template `tpl-file` (will not run any command)",
+		},
+		cli.BoolFlag{
+			 Name: "license",
+			 Usage: "show license",
+		},
+		cli.StringFlag{
+			Name: "loglevel",
+			Value: "info",
+			Usage: "log level, one of debug|`info`|warn|error|fatal",
+		},
+	}
+	return app
+}
+
 func Action(c *cli.Context) error {
-	log.SetHandler(&logcli.Handler{Writer: os.Stderr, Padding: 0})
 	if level, err := log.ParseLevel(c.String("loglevel")); err == nil {
 		log.SetLevel(level)
 	}

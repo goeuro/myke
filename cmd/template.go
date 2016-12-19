@@ -19,6 +19,6 @@ func Template(c *cli.Context) error {
 		log.WithError(err).Fatal("error rendering template")
 	}
 
-	fmt.Print(rendered)
+	fmt.Fprint(c.App.Writer, rendered)
 	return nil
 }
