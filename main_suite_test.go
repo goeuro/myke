@@ -9,19 +9,28 @@ import (
 	"github.com/goeuro/myke/cmd"
 	"testing"
 	"bytes"
+	"strings"
 )
+
+var testtable = []struct {
+	name string
+	arg  string
+	out  string
+}{
+	{`heading`, ``, `PROJECT\s*|\s*TAGS\s*|\s*TASKS`},
+	{`myke`, ``, `myke\s*|\s*|\s*test, package`},
+	{`example`, ``, `example\s*|\s*|\s*build`},
+	{`env`, ``, `env\s*|\s*|\s*env`},
+	{`tags1`, ``, `tags1\s*|\s*tagA, tagB\s*|\s*tag`},
+	{`tags2`, ``, `tags2\s*|\s*tagB, tagC\s*|\s*tag`},
+}
 
 func TestSuite(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "myke CLI")
 }
 
-// Initial boilerlate for CLI BDD
-// We can remove other tests (where possible)
-// And switch to table-based testing
-
 var _ = Describe("myke", func() {
-
 	var stdout *bytes.Buffer
 	var app *cli.App
 
@@ -31,12 +40,11 @@ var _ = Describe("myke", func() {
 		log.SetHandler(&logcli.Handler{Writer: stdout, Padding: 0})
 	})
 
-	Describe("./myke.yml", func() {
-		It("list", func() {
-			app.Run([]string{""})
-			Expect(stdout.String(), MatchRegexp("PROJECT\\s*|\\s*TAGS\\s*|\\s*TASKS"))
-			Expect(stdout.String(), MatchRegexp("myke\\s*|\\s*|\\s*test, package"))
+	for i, _:= range testtable {
+		tt := testtable[i]
+		It(tt.name, func() {
+			app.Run(strings.Split(tt.arg, " "))
+			Expect(stdout.String()).To(MatchRegexp(tt.out))
 		})
-	})
-
+	}
 })
