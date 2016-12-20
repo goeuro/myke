@@ -3,8 +3,8 @@ package cmd
 import (
 	"gopkg.in/urfave/cli.v1"
 	"github.com/goeuro/myke/core"
-	logcli "github.com/apex/log/handlers/cli"
 	"github.com/apex/log"
+	logcli "github.com/apex/log/handlers/cli"
 	"path/filepath"
 	"strings"
 	"os"
@@ -40,7 +40,7 @@ func NewApp() *cli.App {
 }
 
 func Action(c *cli.Context) error {
-	log.SetHandler(&logcli.Handler{Writer: c.App.Writer, Padding: 0})
+	log.SetHandler(&logcli.Handler{Writer: os.Stdout, Padding: 0})
 	if level, err := log.ParseLevel(c.String("loglevel")); err == nil {
 		log.SetLevel(level)
 	}

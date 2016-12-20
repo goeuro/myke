@@ -53,7 +53,8 @@ func (e *Execution) Execute() error {
 
 	elapsed := time.Since(start)
 	if err != nil {
-		log.WithError(err).Fatalf("%v: Failed, Took: %v", displayName, elapsed)
+		log.Errorf("%v/%v: Failed, Took: %v", e.Project.Name, e.Task.Name, elapsed)
+		return err
 	} else {
 		log.Infof("%v: Completed, Took: %v", displayName, elapsed)
 	}

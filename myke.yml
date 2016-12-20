@@ -6,7 +6,7 @@ discover:
 tasks:
   test:
     desc: run as myke test (or) myke myke/test
-    cmd: ginkgo -r
+    cmd: go test -v ./...
   package:
     cmd: cross-compile.sh
     before: myke test
