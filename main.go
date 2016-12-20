@@ -9,7 +9,7 @@ import (
 
 func main() {
 	log.SetHandler(&cli.Handler{Writer: os.Stdout, Padding: 0})
-	if err := cmd.NewApp(os.Stdout).Run(os.Args); err != nil {
+	if err := cmd.NewApp().Run(os.Args); err != nil {
 		log.WithError(err).Fatal("error")
 	}
 }

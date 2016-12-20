@@ -3,20 +3,19 @@ package cmd
 import (
 	"gopkg.in/urfave/cli.v1"
 	"github.com/goeuro/myke/core"
+	logcli "github.com/apex/log/handlers/cli"
 	"github.com/apex/log"
 	"path/filepath"
 	"strings"
 	"os"
-	"io"
 )
 
-func NewApp(writer io.Writer) *cli.App {
+func NewApp() *cli.App {
 	app := cli.NewApp()
 	app.Name = "myke"
 	app.Version = Version()
 	app.Usage = "make with yml"
 	app.Action = Action
-	app.Writer = writer
 	app.Flags = []cli.Flag {
 		cli.StringFlag{
 			 Name: "f, file",
@@ -41,6 +40,7 @@ func NewApp(writer io.Writer) *cli.App {
 }
 
 func Action(c *cli.Context) error {
+	log.SetHandler(&logcli.Handler{Writer: c.App.Writer, Padding: 0})
 	if level, err := log.ParseLevel(c.String("loglevel")); err == nil {
 		log.SetLevel(level)
 	}

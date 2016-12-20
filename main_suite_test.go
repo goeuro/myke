@@ -4,8 +4,6 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"gopkg.in/urfave/cli.v1"
-	"github.com/apex/log"
-	logcli "github.com/apex/log/handlers/cli"
 	"github.com/goeuro/myke/cmd"
 	"testing"
 	"bytes"
@@ -36,8 +34,8 @@ var _ = Describe("myke", func() {
 
 	BeforeEach(func() {
 		stdout = bytes.NewBufferString("")
-		app = cmd.NewApp(stdout)
-		log.SetHandler(&logcli.Handler{Writer: stdout, Padding: 0})
+		app = cmd.NewApp()
+		app.Writer = stdout
 	})
 
 	for i, _:= range testtable {
