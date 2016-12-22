@@ -10,5 +10,5 @@ tasks:
     cmd: echo running after
   before_after:
     cmd: echo running cmd
-    before: $MYKE before
-    after: $MYKE after
+    before: $myke before
+    after: $myke after
