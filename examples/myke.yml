@@ -8,6 +8,7 @@ discover:
   - hooks
   - template
   - mixin
+  - retry
 tasks:
   build:
     cmd: echo example build

@@ -6,8 +6,3 @@ tasks:
     cmd: "false"
     retries: 5
     retry_ms: 10
-  retry_quiet:
-    cmd: "false"
-    retries: 5
-    retry_ms: 10
-    shell: sh -ec
