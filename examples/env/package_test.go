@@ -15,5 +15,5 @@ var tests = []TestTable {
 }
 
 func Test(t *testing.T) {
-	RunCliTests(t, "examples", tests)
+	RunCliTests(t, "examples/env", tests)
 }

@@ -2,6 +2,7 @@ package core
 
 import (
 	"github.com/apex/log"
+	"github.com/kardianos/osext"
 	"os"
 	"os/exec"
 	"time"
@@ -98,7 +99,9 @@ func (e *Execution) executeCmd(cmd string) error {
 }
 
 func (e *Execution) Env() map[string]string {
+	myke, _ := osext.Executable()
 	extraEnv := map[string]string{
+		"MYKE": myke,
 		"MYKE_PROJECT": e.Project.Name,
 		"MYKE_TASK": e.Task.Name,
 		"MYKE_CWD": e.Project.Cwd,
