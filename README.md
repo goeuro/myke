@@ -4,7 +4,7 @@
 
 myke allows you to define tasks in `.yml` files and aggregates all of them. This helps you to manage multiple components in multiple projects in multiple repositories.
 
-Shell scripts are nice for tasks. But for development we frequently found ourselves needing basic templating, retrying, hooks, easily overridable envvars, better listing and documentation, etc. That is how `myke` was born. Its a thin wrapper to aggregate shell scripts with some useful functionality.
+Shell scripts are nice for tasks. But for development we frequently found ourselves needing basic templating, retrying, hooks, easily overridable envvars, better listing and documentation, etc. That is how `myke` was born. Its a thin wrapper to aggregate scripts with some useful functionality.
 
 ## Usage
 
