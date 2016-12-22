@@ -3,8 +3,7 @@ project: example
 desc: example project suite
 discover:
   - env
-  - tag/tags1.yml
-  - tag/tags2.yml
+  - tag
   - hooks
   - template
   - mixin
