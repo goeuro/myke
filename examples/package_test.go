@@ -1,4 +1,4 @@
-package examples
+package test
 
 import (
 	. "github.com/goeuro/myke/examples/util"

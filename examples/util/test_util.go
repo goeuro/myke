@@ -14,8 +14,8 @@ import (
 )
 
 type TestTable struct {
-	Desc string
-	Args string
+	Desc     string
+	Args     string
 	Expected string
 }
 
@@ -33,7 +33,8 @@ func runTest(t *testing.T, tt TestTable) {
 		return cmd.NewApp().Run(args)
 	})
 
-	if err == nil && assert.Regexp(t, tt.Expected, actual) {
+	// TODO: Add error verification
+	if assert.Regexp(t, tt.Expected, actual) {
 		t.Logf("myke(%s): passed", tt.Desc)
 	} else {
 		t.Errorf("myke(%s): failed %s", tt.Desc, err)
