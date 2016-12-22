@@ -81,7 +81,13 @@ func (e *Execution) executeCmd(cmd string) error {
 		return err
 	}
 
-	proc := exec.Command("sh", "-exc", cmd)
+	shell := []string{"sh", "-exc",}
+	if len(e.Task.Shell) > 0 {
+		shell = strings.Split(strings.TrimSpace(e.Task.Shell), " ")
+	}
+	shell = append(shell, cmd)
+
+	proc := exec.Command(shell[0], shell[1:]...)
 	proc.Dir = e.Project.Cwd
 	proc.Env = e.EnvList()
 	proc.Stdin = os.Stdin
