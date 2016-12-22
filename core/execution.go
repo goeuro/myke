@@ -45,7 +45,7 @@ func (e *Execution) Execute() error {
 		err := e.executeTask()
 		if err != nil && attempt < e.Task.Retries {
 			retryMs := time.Duration(e.Task.RetryMs) * time.Millisecond
-			log.Warnf("%v: Failed, %v Retry %v/%v in %v", displayName, attempt < e.Task.Retries, attempt, e.Task.Retries, retryMs)
+			log.Debugf("%v: Failed, Retrying %v/%v in %v", displayName, attempt, e.Task.Retries, retryMs)
 			time.Sleep(retryMs)
 		}
 		return attempt < e.Task.Retries, err
