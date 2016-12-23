@@ -4,5 +4,5 @@ desc: demonstrates use of templates and parameters in command
 tasks:
   retry:
     cmd: "false"
-    retries: 5
+    retry: 5
     retry_ms: 10

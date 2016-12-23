@@ -14,12 +14,12 @@ type Task struct {
 	Before  string
 	After   string
 	Shell   string
-	Retries int
+	Retry   int
 	RetryMs int
 }
 
 func loadTaskJson(name string, json gjson.Result) Task {
-	t := Task{Retries:0,RetryMs:1000,}
+	t := Task{Retry:0,RetryMs:1000,}
 	t.Name = name
 
 	if j := json.Get("desc"); j.Exists() {
@@ -37,11 +37,11 @@ func loadTaskJson(name string, json gjson.Result) Task {
 	if j := json.Get("shell"); j.Exists() {
 		t.Shell = strings.TrimSpace(j.String())
 	}
-	if j := json.Get("retries"); j.Exists() {
-		if retries, err := strconv.Atoi(strings.TrimSpace(j.String())); err != nil {
-			log.WithError(err).Warnf("invalid retries in task %s", name)
+	if j := json.Get("retry"); j.Exists() {
+		if retry, err := strconv.Atoi(strings.TrimSpace(j.String())); err != nil {
+			log.WithError(err).Warnf("invalid retry in task %s", name)
 		} else {
-			t.Retries = retries
+			t.Retry = retry
 		}
 	}
 	if j := json.Get("retry_ms"); j.Exists() {

@@ -44,12 +44,12 @@ func (e *Execution) Execute() error {
 
 	err := retry(func(attempt int) (bool, error) {
 		err := e.executeTask()
-		if err != nil && attempt < e.Task.Retries {
+		if err != nil && attempt < e.Task.Retry {
 			retryMs := time.Duration(e.Task.RetryMs) * time.Millisecond
-			log.Debugf("%v: Failed, Retrying %v/%v in %v", displayName, attempt, e.Task.Retries, retryMs)
+			log.Debugf("%v: Failed, Retrying %v/%v in %v", displayName, attempt, e.Task.Retry, retryMs)
 			time.Sleep(retryMs)
 		}
-		return attempt < e.Task.Retries, err
+		return attempt < e.Task.Retry, err
 	})
 
 	elapsed := time.Since(start)
