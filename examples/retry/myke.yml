@@ -5,4 +5,5 @@ tasks:
   retry:
     cmd: "false"
     retry: 5
-    retry_ms: 10
+    # retry_delay defaults to 1s
+    retry_delay: 10ms
