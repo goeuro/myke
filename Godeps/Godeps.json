@@ -31,7 +31,7 @@
 		},
 		{
 			"ImportPath": "github.com/ghodss/yaml",
-			"Rev": "bea76d6a4713e18b7f5321a2b020738552def3ea"
+			"Rev": "04f313413ffd65ce25f2541bfd2b2ceec5c0908c"
 		},
 		{
 			"ImportPath": "github.com/joho/godotenv",
