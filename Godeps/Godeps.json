@@ -8,7 +8,7 @@
 	"Deps": [
 		{
 			"ImportPath": "github.com/Masterminds/sprig",
-			"Comment": "2.7.0-4-g69011c0",
+			"Comment": "2.8.0",
 			"Rev": "69011c0cd9b4d2e0733c4d9e2c8e2a5a0d0a2f2f"
 		},
 		{
