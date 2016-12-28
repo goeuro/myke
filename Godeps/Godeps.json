@@ -35,8 +35,8 @@
 		},
 		{
 			"ImportPath": "github.com/joho/godotenv",
-			"Comment": "v1-10-g4ed1339",
-			"Rev": "4ed13390c0acd2ff4e371e64d8b97c8954138243"
+			"Comment": "v1-13-g726cc8b",
+			"Rev": "726cc8b906e3d31c70a9671c90a13716a8d3f50d"
 		},
 		{
 			"ImportPath": "github.com/kardianos/osext",
