@@ -81,7 +81,7 @@
 		},
 		{
 			"ImportPath": "github.com/tidwall/gjson",
-			"Rev": "7afd24f7a27574c6a07a012c2bdbdb80b494dc20"
+			"Rev": "e3f249f4fdf33c278edeb770426a6f83c954ae64"
 		},
 		{
 			"ImportPath": "github.com/tidwall/match",
