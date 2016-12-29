@@ -4,7 +4,7 @@
 
 Development scripts usually begin as a simple shell wrapper with switch cases (`service.sh start|stop|etc`), and then aggregate multiple scripts, add arguments, discovery/listing, environment variable handling, then easy overriding and defaults, and soon manipulating files based on these variables, `sed|awk|envsubst`, then proceed to python/ruby/etc with some real templating, then start adding dependencies, then become projects themselves with a checkout/setup process :trollface:
 
-myke solves all those problems in a single tiny binary, so that we can stop reinventing the same shell helpers over and over again.
+myke solves all these problems in a single tiny binary, to avoid reinventing the same stuff over and over again.
 
 ## Features
 
