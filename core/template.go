@@ -1,11 +1,11 @@
 package core
 
 import (
+	"bytes"
+	"errors"
+	"fmt"
 	"github.com/Masterminds/sprig"
 	"text/template"
-	"errors"
-	"bytes"
-	"fmt"
 )
 
 func RenderTemplate(tmpl string, env map[string]string, args map[string]string) (string, error) {

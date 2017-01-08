@@ -1,13 +1,13 @@
 package core
 
 import (
+	"errors"
 	"github.com/apex/log"
 	"github.com/kardianos/osext"
 	"os"
 	"os/exec"
-	"time"
 	"strings"
-	"errors"
+	"time"
 )
 
 type Execution struct {
@@ -82,7 +82,7 @@ func (e *Execution) executeCmd(cmd string) error {
 		return err
 	}
 
-	shell := []string{"sh", "-exc",}
+	shell := []string{"sh", "-exc"}
 	if len(e.Task.Shell) > 0 {
 		shell = strings.Split(strings.TrimSpace(e.Task.Shell), " ")
 	}
@@ -100,13 +100,13 @@ func (e *Execution) executeCmd(cmd string) error {
 func (e *Execution) Env() map[string]string {
 	myke, _ := osext.Executable()
 	extraEnv := map[string]string{
-		"myke": myke,
+		"myke":         myke,
 		"MYKE_PROJECT": e.Project.Name,
-		"MYKE_TASK": e.Task.Name,
-		"MYKE_CWD": e.Project.Cwd,
+		"MYKE_TASK":    e.Task.Name,
+		"MYKE_CWD":     e.Project.Cwd,
 	}
 	env := mergeEnv(mergeEnv(e.Project.Env, extraEnv), OsEnv())
-	env["PATH"] = strings.Join([]string{ env["PATH"], os.Getenv("PATH") }, PathSep)
+	env["PATH"] = strings.Join([]string{env["PATH"], os.Getenv("PATH")}, PathSep)
 	return env
 }
 

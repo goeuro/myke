@@ -1,13 +1,13 @@
 package cmd
 
 import (
-	"gopkg.in/urfave/cli.v1"
-	"github.com/goeuro/myke/core"
 	"github.com/apex/log"
 	logcli "github.com/apex/log/handlers/cli"
+	"github.com/goeuro/myke/core"
+	"gopkg.in/urfave/cli.v1"
+	"os"
 	"path/filepath"
 	"strings"
-	"os"
 )
 
 func NewApp() *cli.App {
@@ -16,22 +16,22 @@ func NewApp() *cli.App {
 	app.Version = Version()
 	app.Usage = "make with yml"
 	app.Action = Action
-	app.Flags = []cli.Flag {
+	app.Flags = []cli.Flag{
 		cli.StringFlag{
-			 Name: "f, file",
-			 Value: "myke.yml",
-			 Usage: "`yml-file` to load",
+			Name:  "f, file",
+			Value: "myke.yml",
+			Usage: "`yml-file` to load",
 		},
 		cli.StringFlag{
-			 Name: "template",
-			 Usage: "render template `tpl-file` (will not run any command)",
+			Name:  "template",
+			Usage: "render template `tpl-file` (will not run any command)",
 		},
 		cli.BoolFlag{
-			 Name: "license",
-			 Usage: "show license",
+			Name:  "license",
+			Usage: "show license",
 		},
 		cli.StringFlag{
-			Name: "loglevel",
+			Name:  "loglevel",
 			Value: "info",
 			Usage: "log level, one of debug|`info`|warn|error|fatal",
 		},

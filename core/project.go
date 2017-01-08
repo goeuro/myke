@@ -6,8 +6,8 @@ import (
 
 	"io/ioutil"
 	"path/filepath"
-	"strings"
 	"sort"
+	"strings"
 )
 
 type Project struct {
@@ -40,10 +40,10 @@ func ParseProject(path string) (Project, error) {
 
 	p.Src = src
 	p.Cwd = filepath.Dir(src)
-	p.EnvFiles = append(p.EnvFiles, strings.TrimSuffix(src, ".yml") + ".env")
+	p.EnvFiles = append(p.EnvFiles, strings.TrimSuffix(src, ".yml")+".env")
 	for _, epath := range p.EnvFiles {
 		p.Env = mergeEnv(p.Env, loadEnvFile(normalizeFilePath(p.Cwd, epath)))
-		p.Env = mergeEnv(p.Env, loadEnvFile(normalizeFilePath(p.Cwd, epath + ".local")))
+		p.Env = mergeEnv(p.Env, loadEnvFile(normalizeFilePath(p.Cwd, epath+".local")))
 	}
 
 	p.Env = mergeEnv(p.Env, OsEnv())

@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"gopkg.in/urfave/cli.v1"
 	"github.com/rdsubhas/go-elastictable"
-	"strings"
+	"gopkg.in/urfave/cli.v1"
 	"sort"
+	"strings"
 )
 
 var headers = []string{"PROJECT", "TAGS", "TASKS"}

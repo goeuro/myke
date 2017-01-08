@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"gopkg.in/urfave/cli.v1"
 	"github.com/goeuro/myke/core"
 	"github.com/pkg/errors"
+	"gopkg.in/urfave/cli.v1"
 )
 
 func Run(c *cli.Context) error {

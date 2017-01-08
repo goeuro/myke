@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"gopkg.in/urfave/cli.v1"
+	"fmt"
 	"github.com/goeuro/myke/core"
 	"github.com/pkg/errors"
-	"fmt"
+	"gopkg.in/urfave/cli.v1"
 	"io/ioutil"
 )
 

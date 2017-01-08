@@ -1,10 +1,10 @@
 package core
 
 import (
-	"github.com/tidwall/gjson"
 	"github.com/apex/log"
-	"strings"
+	"github.com/tidwall/gjson"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -22,7 +22,7 @@ type Task struct {
 const default_delay = time.Duration(1) * time.Second
 
 func loadTaskJson(name string, json gjson.Result) Task {
-	t := Task{Retry:0, RetryDelay:default_delay,}
+	t := Task{Retry: 0, RetryDelay: default_delay}
 	t.Name = name
 
 	if j := json.Get("desc"); j.Exists() {
