@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+// NewApp creates a new CLI app
 func NewApp() *cli.App {
 	app := cli.NewApp()
 	app.Name = "myke"
@@ -39,6 +40,7 @@ func NewApp() *cli.App {
 	return app
 }
 
+// Action is the CLI entrypoint
 func Action(c *cli.Context) error {
 	log.SetHandler(&logcli.Handler{Writer: os.Stdout, Padding: 0})
 	if level, err := log.ParseLevel(c.String("loglevel")); err == nil {
@@ -51,11 +53,12 @@ func Action(c *cli.Context) error {
 		return License(c)
 	} else if c.NArg() > 0 {
 		return Run(c)
-	} else {
-		return List(c)
 	}
+
+	return List(c)
 }
 
+// Version prints myke version
 func Version() string {
 	version, _ := core.Asset("tmp/version")
 	return strings.TrimSpace(string(version))

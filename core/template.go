@@ -2,12 +2,12 @@ package core
 
 import (
 	"bytes"
-	"errors"
 	"fmt"
 	"github.com/Masterminds/sprig"
 	"text/template"
 )
 
+// RenderTemplate renders the given template with env/args map
 func RenderTemplate(tmpl string, env map[string]string, args map[string]string) (string, error) {
 	w := new(bytes.Buffer)
 	params := union(env, args)
@@ -31,7 +31,6 @@ func RenderTemplate(tmpl string, env map[string]string, args map[string]string) 
 func templateRequired(s string) (interface{}, error) {
 	if len(s) > 0 {
 		return s, nil
-	} else {
-		return s, errors.New(fmt.Sprintf("variable not provided to template"))
 	}
+	return s, fmt.Errorf("variable not provided to template")
 }

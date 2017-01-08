@@ -6,6 +6,7 @@ import (
 	"gopkg.in/urfave/cli.v1"
 )
 
+// Run runs the given tasks
 func Run(c *cli.Context) error {
 	qs := make([]string, len(c.Args()))
 	for i, v := range c.Args() {

@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 )
 
+// Template renders the given template file
 func Template(c *cli.Context) error {
 	bytes, err := ioutil.ReadFile(c.String("template"))
 	if err != nil {

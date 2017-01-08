@@ -9,6 +9,7 @@ import (
 
 var headers = []string{"PROJECT", "TAGS", "TASKS"}
 
+// List lists tasks
 func List(c *cli.Context) error {
 	w := loadWorkspace(c.String("file"))
 	t := elastictable.NewElasticTable(headers)

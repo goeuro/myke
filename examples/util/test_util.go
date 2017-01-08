@@ -13,12 +13,14 @@ import (
 	"testing"
 )
 
+// TestTable represents a table-driven test
 type TestTable struct {
 	Desc     string
 	Args     string
 	Expected string
 }
 
+// RunCliTests runs myke CLI with the given table tests
 func RunCliTests(t *testing.T, dir string, tests []TestTable) {
 	captureChdir(dir, func() {
 		for _, tt := range tests {
