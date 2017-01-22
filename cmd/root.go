@@ -9,7 +9,6 @@ import (
 	"io"
 	"os"
 	"path/filepath"
-	"strings"
 )
 
 type mykeOpts struct {
@@ -59,21 +58,17 @@ func Action(opts *mykeOpts, tasks []string) error {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	if len(opts.Template) > 0 {
-		return Template(opts)
+	if opts.Version {
+		return Version(opts)
 	} else if opts.License {
 		return License(opts)
+	} else if len(opts.Template) > 0 {
+		return Template(opts)
 	} else if len(tasks) > 0 {
 		return Run(opts, tasks)
 	}
 
 	return List(opts)
-}
-
-// Version prints myke version
-func Version() string {
-	version, _ := core.Asset("tmp/version")
-	return strings.TrimSpace(string(version))
 }
 
 func loadWorkspace(path string) core.Workspace {
