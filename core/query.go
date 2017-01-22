@@ -1,7 +1,6 @@
 package core
 
 import (
-	"fmt"
 	"path/filepath"
 	"strings"
 )
@@ -22,7 +21,6 @@ type queryMatch struct {
 // ParseQueries parses a query from the command line
 func ParseQueries(qs []string) ([]Query, error) {
 	queries := make([]Query, 0)
-	fmt.Println(qs, splitQueries(qs))
 	for _, q := range splitQueries(qs) {
 		query, err := parseQuery(q)
 		if err != nil {
