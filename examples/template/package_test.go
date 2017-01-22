@@ -9,6 +9,7 @@ var tests = []TestTable{
 	{`args_from_to`, `args[from=a,to=b]`, `from=a to=b`},
 	{`args_from`, `args[from=a]`, `from=a to=something_to`},
 	{`args`, `args`, `(?s)template/args: Failed`},
+	// Cannot invoke myke subcommand in a test
 	// {`file`, `file`, `(?s)I am a template.*PARAM1=value1.*PARAM2=value2`},
 }
 
