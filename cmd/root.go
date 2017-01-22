@@ -32,7 +32,9 @@ func Exec(_args []string) error {
 
 	var mykeOpts mykeOpts
 	mykeOpts.Writer = os.Stdout
-	parser := flags.NewParser(&mykeOpts, flags.IgnoreUnknown|flags.HelpFlag|flags.PassAfterNonOption)
+	parser := flags.NewNamedParser("myke", flags.IgnoreUnknown|flags.HelpFlag|flags.PassAfterNonOption)
+	parser.AddGroup("myke options", "myke options", &mykeOpts)
+	parser.Usage = "[--myke-options] [tag/]task [--task-options] ..."
 	tasks, err := parser.ParseArgs(args)
 
 	if err != nil {

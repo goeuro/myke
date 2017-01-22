@@ -41,7 +41,7 @@ func splitQueries(qs []string) [][]string {
 	res := [][]string{}
 	last := 0
 	for i, q := range qs[1:] {
-		if !strings.HasPrefix(q, "--") {
+		if !strings.Contains(q, "=") {
 			res = append(res, qs[last:i+1])
 			last = i + 1
 		}
@@ -58,7 +58,7 @@ func parseQuery(tokens []string) (Query, error) {
 	params := make(map[string]string)
 	if len(tokens) > 1 {
 		for _, pair := range tokens[1:] {
-			kv := strings.SplitN(strings.TrimLeft(pair, "--"), "=", 2)
+			kv := strings.SplitN(strings.TrimLeft(pair, "-"), "=", 2)
 			if len(kv) == 2 {
 				params[kv[0]] = kv[1]
 			}

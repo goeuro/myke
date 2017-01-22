@@ -41,7 +41,7 @@ Using the above myke.yml, you can invoke tasks like:
 * `myke <project>/build` runs build in that specific `<project>`
 * `myke <tag>/build` runs build in all projects tagged `<tag>`
 * `myke <tagA>/<tagB>/.../build` can match tasks by many tags (AND)
-* `myke task1 --key1=val1 task2 --key2=val2 ...` can pass arguments to individual tasks
+* `myke task1 --key1=val1 task2 --key2=val2 ...` passes arguments to individual tasks
 
 ## Installation
 
