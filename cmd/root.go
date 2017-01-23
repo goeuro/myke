@@ -44,9 +44,9 @@ func Exec(_args []string) error {
 		}
 
 		return err
-	} else {
-		return Action(&mykeOpts, tasks)
 	}
+
+	return Action(&mykeOpts, tasks)
 }
 
 // Action runs using parsed args
