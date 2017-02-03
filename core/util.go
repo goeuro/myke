@@ -104,3 +104,13 @@ func retry(f func(attempt int) (retry bool, err error)) error {
 		attempt++
 	}
 }
+
+func mapToSlice(in map[string]string) []string {
+	list := make([]string, len(in))
+	i := 0
+	for k, v := range in {
+		list[i] = k + "=" + v
+		i++
+	}
+	return list
+}
