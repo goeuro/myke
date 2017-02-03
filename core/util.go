@@ -41,7 +41,8 @@ func OsEnv() map[string]string {
 	env := make(map[string]string)
 	for _, e := range os.Environ() {
 		pair := strings.SplitN(e, "=", 2)
-		if pair[0] != "PATH" {
+		// ToUpper is important here because on Windows this is case insensitive
+		if strings.ToUpper(pair[0]) != "PATH" {
 			// PATH is handled as a special case, so lets skip it
 			env[pair[0]] = pair[1]
 		}

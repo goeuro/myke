@@ -28,6 +28,9 @@ func executionShell() []string {
 }
 
 func (e *Execution) beforeExecuteCmd(cmd string, env map[string]string) error {
+	if len(e.Task.Shell) > 0 {
+		return nil
+	}
 	// This will cause the same output like the sh -x on unix like systems.
 	proc := exec.Command(comSpec, "/C", "echo", "+", cmd)
 	proc.Dir = e.Project.Cwd
