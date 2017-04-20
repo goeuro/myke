@@ -39,9 +39,9 @@ func parseWorkspaceNested(cwd string, path string, in chan parseResult) {
 	file := filepath.Join(cwd, path)
 	p, err := ParseProject(file)
 	if err != nil {
-		in <- parseResult{p, err,}
+		in <- parseResult{p, err}
 	} else {
-		in <- parseResult{p, nil,}
+		in <- parseResult{p, nil}
 		for _, includePath := range p.Discover {
 			parseWorkspaceNested(p.Cwd, includePath, in)
 		}
