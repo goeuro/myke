@@ -14,6 +14,7 @@ var tests = []TestTable{
 	{Arg: ``, Out: `(?m)^\s*tags1\s*\|\s*tagA, tagB\s*\|\s*tag\s*$`},
 	{Arg: ``, Out: `(?m)^\s*tags2\s*\|\s*tagB, tagC\s*\|\s*tag\s*$`},
 	{Arg: ``, Out: `(?m)^\s*template\s*\|\s*\|\s*args, envs, file\s*$`},
+	{Arg: `-f myke-error.yml test`, Err: true, Out: `no files matched foobar/`},
 }
 
 func Test(t *testing.T) {
