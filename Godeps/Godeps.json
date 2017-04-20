@@ -18,11 +18,11 @@
 		},
 		{
 			"ImportPath": "github.com/apex/log",
-			"Rev": "994011249d68d2b3ca735641c1f03686c5c794de"
+			"Rev": "a0bcece0a725e2b62f01d948b25ba3c22ebfb792"
 		},
 		{
 			"ImportPath": "github.com/apex/log/handlers/cli",
-			"Rev": "994011249d68d2b3ca735641c1f03686c5c794de"
+			"Rev": "a0bcece0a725e2b62f01d948b25ba3c22ebfb792"
 		},
 		{
 			"ImportPath": "github.com/davecgh/go-spew/spew",
@@ -46,7 +46,7 @@
 		},
 		{
 			"ImportPath": "github.com/kardianos/osext",
-			"Rev": "c2c54e542fb797ad986b31721e1baedf214ca413"
+			"Rev": "9d302b58e975387d0b4d9be876622c86cefe64be"
 		},
 		{
 			"ImportPath": "github.com/olekukonko/ts",
@@ -82,7 +82,7 @@
 		},
 		{
 			"ImportPath": "github.com/tidwall/gjson",
-			"Rev": "e3f249f4fdf33c278edeb770426a6f83c954ae64"
+			"Rev": "e30a9c1037e0f9fbde93a6a9848a2dd5c59d3b91"
 		},
 		{
 			"ImportPath": "github.com/tidwall/match",
