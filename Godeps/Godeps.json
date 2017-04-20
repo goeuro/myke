@@ -1,7 +1,7 @@
 {
 	"ImportPath": "github.com/goeuro/myke",
-	"GoVersion": "go1.7",
-	"GodepVersion": "v75",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
 	"Packages": [
 		"./..."
 	],
@@ -35,22 +35,17 @@
 		},
 		{
 			"ImportPath": "github.com/jessevdk/go-flags",
-			"Comment": "v1.1-5-g4e64e4a",
+			"Comment": "v1.1.0-5-g4e64e4a",
 			"Rev": "4e64e4a4e2552194cf594243e23aa9baf3b4297e"
 		},
 		{
 			"ImportPath": "github.com/joho/godotenv",
-			"Comment": "v1-13-g726cc8b",
+			"Comment": "v1.1",
 			"Rev": "726cc8b906e3d31c70a9671c90a13716a8d3f50d"
 		},
 		{
 			"ImportPath": "github.com/kardianos/osext",
 			"Rev": "c2c54e542fb797ad986b31721e1baedf214ca413"
-		},
-		{
-			"ImportPath": "github.com/mattn/go-runewidth",
-			"Comment": "v0.0.1-10-g737072b",
-			"Rev": "737072b4e32b7a5018b4a7125da8d12de90e8045"
 		},
 		{
 			"ImportPath": "github.com/olekukonko/ts",
@@ -68,7 +63,7 @@
 		},
 		{
 			"ImportPath": "github.com/rdsubhas/go-elastictable",
-			"Rev": "49a2478025243b847ace69cc5c7d640039b4debe"
+			"Rev": "6f173a85235b3139683de6e37892a576a9fdca08"
 		},
 		{
 			"ImportPath": "github.com/satori/go.uuid",
@@ -95,6 +90,16 @@
 		{
 			"ImportPath": "gopkg.in/yaml.v2",
 			"Rev": "a5b47d31c556af34a302ce5d659e6fea44d90de0"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew",
+			"Comment": "v1.1.4-25-g2402e8e",
+			"Rev": "2402e8e7a02fc811447d11f881aa9746cdc57983"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib",
+			"Comment": "v1.1.4-25-g2402e8e",
+			"Rev": "2402e8e7a02fc811447d11f881aa9746cdc57983"
 		}
 	]
 }
