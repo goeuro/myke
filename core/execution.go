@@ -94,9 +94,6 @@ func (e *Execution) executeCmd(cmd string) error {
 	if err != nil {
 		return err
 	}
-	cmd = os.Expand(cmd, func(key string) string {
-		return env[key]
-	})
 
 	e.beforeExecuteCmd(cmd, env)
 
