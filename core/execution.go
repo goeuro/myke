@@ -95,18 +95,7 @@ func (e *Execution) executeCmd(cmd string) error {
 		return err
 	}
 
-	cmd = os.Expand(cmd, func(key string) string {
-		if strings.HasPrefix(key, "(") {
-			// Ignore subshells
-			return "$" + key
-		} else {
-			return env[key]
-		}
-	})
-
-	e.beforeExecuteCmd(cmd, env)
-
-	shell := executionShell()
+	shell := []string{"sh", "-exc"}
 	if len(e.Task.Shell) > 0 {
 		shell = strings.Split(strings.TrimSpace(e.Task.Shell), " ")
 	}
