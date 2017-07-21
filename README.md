@@ -64,7 +64,7 @@ Explore the self documenting `examples` folder.
 * same is done for every mixin that the yml uses
   * So, if you mixin `<some-other-folder>/myke.yml`, then that yml's `cwd/bin` is also added to the PATH, that yml's env/env_files/env_files.local are also loaded, and so on
 * shell exported environment variables take precedence
-* additional variables: `$MYKE_PROJECT`, `$MYKE_TASK`, `$MYKE_CWD` are always set
+* additional variables: `$MYKE_WS_CWD` `$MYKE_PROJECT`, `$MYKE_TASK`, `$MYKE_CWD` are always set
   * `$myke` is set to full path of myke itself to easily nest myke calls (e.g. `$myke do_something` will become `myke.exe do_something` in windows)
 * command is templated using golang text/template and sprig
   * environment and task arguments are passed in as variables

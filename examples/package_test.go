@@ -7,7 +7,7 @@ import (
 
 var tests = []TestTable{
 	{Arg: ``, Out: `(?m)^\s*PROJECT\s*\|\s*TAGS\s*\|\s*TASKS\s*$`},
-	{Arg: ``, Out: `(?m)^\s*env\s*\|\s*\|\s*file_custom, file_custom_local, file_default, file_default_local, path, yml\s*$`},
+	{Arg: ``, Out: `(?m)^\s*env\s*\|\s*\|\s*file_custom, file_custom_local, file_default, file_default_local, myke_env_cwd, myke_env_myke, myke_env_project, myke_env_task, myke_env_ws_cwd, path, yml\s*$`},
 	{Arg: ``, Out: `(?m)^\s*hooks\s*\|\s*\|\s*after, before, error\s*$`},
 	{Arg: ``, Out: `(?m)^\s*mixin\s*\|\s*\|\s*path, task1, task2, task3\s*$`},
 	{Arg: ``, Out: `(?m)^\s*retry\s*\|\s*\|\s*retry\s*$`},

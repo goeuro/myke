@@ -119,6 +119,7 @@ func (e *Execution) env() map[string]string {
 	myke, _ := osext.Executable()
 	extraEnv := map[string]string{
 		"myke":         myke,
+		"MYKE_WS_CWD":  e.Workspace.Cwd,
 		"MYKE_PROJECT": e.Project.Name,
 		"MYKE_TASK":    e.Task.Name,
 		"MYKE_CWD":     e.Project.Cwd,
