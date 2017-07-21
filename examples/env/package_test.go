@@ -12,6 +12,11 @@ var tests = []TestTable{
 	{Arg: `file_custom`, Out: `envvar from test.env is value_from_test.env`},
 	{Arg: `file_custom_local`, Out: `envvar from test.env.local is value_from_test.env.local`},
 	{Arg: `path`, Out: `PATH is [^$PLS$]+env$PS$path_from_myke.env.local$PLS$[^$PLS$]+env$PS$path_from_myke.env$PLS$[^$PLS$]+env$PS$path_from_test.env.local$PLS$[^$PLS$]+env$PS$path_from_test.env$PLS$[^$PLS$]+env$PS$path_from_yml$PLS$[^$PLS$]+env$PS$bin`},
+	{Arg: `myke_env_myke`, Out: `myke`},
+	{Arg: `myke_env_ws_cwd`, Out: `[/\\]examples[/\\]env`},
+	{Arg: `myke_env_project`, Out: `env`},
+	{Arg: `myke_env_task`, Out: `myke_env_task`},
+	{Arg: `myke_env_cwd`, Out: `[/\\]examples[/\\]env`},
 }
 
 func Test(t *testing.T) {

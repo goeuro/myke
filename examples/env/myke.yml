@@ -31,3 +31,13 @@ tasks:
     cmd: echo envvar from test.env.local is $KEY_ENVFILE_LOCAL
   path:
     cmd: echo PATH is $PATH
+  myke_env_myke:
+    cmd: echo $myke
+  myke_env_ws_cwd:
+    cmd: echo $MYKE_WS_CWD
+  myke_env_project:
+    cmd: echo $MYKE_PROJECT
+  myke_env_task:
+    cmd: echo $MYKE_TASK
+  myke_env_cwd:
+    cmd: echo $MYKE_CWD
