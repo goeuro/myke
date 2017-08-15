@@ -3,3 +3,4 @@ project: myke
 desc: make with yml
 discover:
   - examples
+
