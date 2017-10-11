@@ -10,3 +10,7 @@ tasks:
     cmd: foobar
   echo:
     cmd: echo
+  interpolate:
+    cmd:
+      foo=value_from_task
+      echo $(echo envvar from subshell is $foo)
