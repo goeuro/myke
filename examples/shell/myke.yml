@@ -11,6 +11,6 @@ tasks:
   echo:
     cmd: echo
   interpolate:
-    cmd:
+    cmd: |-
       foo=value_from_task
       echo $(echo envvar from subshell is $foo)
