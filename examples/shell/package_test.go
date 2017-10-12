@@ -16,6 +16,7 @@ var tests = []TestTable{
 	{Arg: `-v=1 echo`, Out: `(Running){0}`},
 	{Arg: `-v=1 echo`, Out: `(echo)`},
 	{Arg: `subshell`, Out: `subshell works`},
+	{Arg: `interpolate`, Out: `envvar from subshell is value_from_task`},
 }
 
 func Test(t *testing.T) {

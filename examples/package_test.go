@@ -14,6 +14,7 @@ var tests = []TestTable{
 	{Arg: ``, Out: `(?m)^\s*tags1\s*\|\s*tagA, tagB\s*\|\s*tag\s*$`},
 	{Arg: ``, Out: `(?m)^\s*tags2\s*\|\s*tagB, tagC\s*\|\s*tag\s*$`},
 	{Arg: ``, Out: `(?m)^\s*template\s*\|\s*\|\s*args, envs, file\s*$`},
+	{Arg: ``, Out: `(?m)^\s*shell\s*\|\s*\|\s*echo, error, interpolate, shell, subshell\s*$`},
 	{Arg: `--help`, Out: `(?s).*Usage.*myke options.*`},
 	{Arg: `--version`, Out: `.*myke version.*`},
 	{Arg: `--license`, Out: `.*OPEN SOURCE LICENSES.*`},
