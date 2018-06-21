@@ -12,12 +12,13 @@ import (
 )
 
 type mykeOpts struct {
-	Verbose  int    `short:"v" long:"verbose" description:"verbosity level, <=0 nothing, =3 info, >=5 everything" default:"3"`
-	File     string `short:"f" long:"file" description:"yml file to load" default:"myke.yml"`
-	DryRun   bool   `short:"n" long:"dry-run" description:"print tasks without running them"`
-	Version  bool   `long:"version" description:"print myke version"`
-	Template string `long:"template" description:"template file to render"`
-	License  bool   `long:"license" description:"show open source licenses"`
+	Verbose  int           `short:"v" long:"verbose" description:"verbosity level, <=0 nothing, =3 info, >=5 everything" default:"3"`
+	File     string        `short:"f" long:"file" description:"yml file to load" default:"myke.yml"`
+	DryRun   bool          `short:"n" long:"dry-run" description:"print tasks without running them"`
+	Version  bool          `long:"version" description:"print myke version"`
+	Template string        `long:"template" description:"template file to render"`
+	License  bool          `long:"license" description:"show open source licenses"`
+	ListFullTaskNames bool `long:"tasks" description:"lists the full name of every known tasks"`
 	Writer   io.Writer
 }
 
@@ -71,6 +72,10 @@ func Action(opts *mykeOpts, tasks []string) error {
 		return Template(opts)
 	} else if len(tasks) > 0 {
 		return Run(opts, tasks)
+	}
+
+	if opts.ListFullTaskNames {
+		return ListFullTaskNames(opts, tasks)
 	}
 
 	return List(opts)
