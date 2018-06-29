@@ -1,2 +1,2 @@
 #myke
-complete -x -c myke -a '(myke --tasks)'
+complete -x -c myke -a "(myke --tasks )"
