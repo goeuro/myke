@@ -6,6 +6,7 @@ github.com/aokoli/goutils v0.0.0-20140502001128-9c37978a95bd h1:gE1k0mCB0xXeVlUd
 github.com/aokoli/goutils v0.0.0-20140502001128-9c37978a95bd/go.mod h1:SijmP0QR8LtwsmDs8Yii5Z/S4trXFGFC2oO5g9DP+DQ=
 github.com/apex/log v0.0.0-20170412164658-a0bcece0a725 h1:enWbgnn8tOTk85yg4p7xrjsZ7ufKLuBXOS4Zh2mvhsE=
 github.com/apex/log v0.0.0-20170412164658-a0bcece0a725/go.mod h1:yA770aXIDQrhVOIGurT/pVdfCpSq1GQV/auzMN5fzvY=
+github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/ghodss/yaml v1.0.0 h1:wQHKEahhL6wmXdzwWG11gIVCkOv05bNOh+Rxn0yngAk=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
@@ -29,11 +30,13 @@ github.com/omeid/go-resources v0.0.0-20171025031226-ca9993b7d1a4 h1:Uv6HZs0LhOEB
 github.com/omeid/go-resources v0.0.0-20171025031226-ca9993b7d1a4/go.mod h1:SIESmZeFlCKsQZcd2NEiX8spNNmCWB1V/RbM/eBKDfo=
 github.com/pkg/errors v0.0.0-20161029093637-248dadf4e906 h1:aXc/AM323HlkOXjl3QuSO06wbXK45HrzBT+pwVOufXg=
 github.com/pkg/errors v0.0.0-20161029093637-248dadf4e906/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rdsubhas/go-elastictable v0.0.0-20170420232059-6f173a85235b h1:hQUl8cJkiYfCE3IEgVSVfPRM1ONpEbgZi4+Cc9Le8jM=
 github.com/rdsubhas/go-elastictable v0.0.0-20170420232059-6f173a85235b/go.mod h1:ImFGRbRb/6h/45mIEy3Lp/PunOBrxZU1LFAIhej5A7U=
 github.com/satori/go.uuid v0.0.0-20160927100844-b061729afc07 h1:DEZDfcCVq3xDJrjqdCgyN/dHYVoqR92MCsdqCdxmnhM=
 github.com/satori/go.uuid v0.0.0-20160927100844-b061729afc07/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
+github.com/stretchr/testify v0.0.0-20161217200445-2402e8e7a02f h1:LnH9yV1HtIJzh+HlIuWDOdVtNKF+J6P4JyFVNTiinS4=
 github.com/stretchr/testify v0.0.0-20161217200445-2402e8e7a02f/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/tgulacsi/wrap v0.0.0-20160112181456-972bd931cfd1 h1:dxQsBwaYDoSeseTSFqtesKMGrhjh1AsLoWUfzqMB1Fc=
 github.com/tgulacsi/wrap v0.0.0-20160112181456-972bd931cfd1/go.mod h1:wWhxzLP2llDlbOBxnEKB0XpS0uEnzCRi6xvRshYuva4=

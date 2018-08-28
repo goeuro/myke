@@ -31,7 +31,7 @@ done
 
 # Compile resources
 go run github.com/omeid/go-resources/cmd/resources \
-	-output core/bindata.go -package core tmp/
+	-declare -var=FS -output core/bindata.go -package core tmp/*
 
 # Cross compile
 go run github.com/mitchellh/gox \
