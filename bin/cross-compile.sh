@@ -29,11 +29,12 @@ for dep in $deps; do
 	fi
 done
 
-# Compile bindata
-go-bindata -o core/bindata.go -nometadata -pkg core tmp/
+# Compile resources
+go run github.com/omeid/go-resources/cmd/resources \
+	-output core/bindata.go -package core tmp/
 
 # Cross compile
-gox \
+go run github.com/mitchellh/gox \
 	-osarch="darwin/amd64 linux/amd64 windows/amd64" \
 	-ldflags="-s -w" \
 	-output="bin/{{.Dir}}_{{.OS}}_{{.Arch}}"

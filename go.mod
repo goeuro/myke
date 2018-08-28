@@ -7,10 +7,15 @@ require (
 	github.com/apex/log v0.0.0-20170412164658-a0bcece0a725
 	github.com/davecgh/go-spew v1.1.0
 	github.com/ghodss/yaml v1.0.0
+	github.com/go-playground/overalls v0.0.0-20180201144345-22ec1a223b7c // indirect
+	github.com/golang/lint v0.0.0-20180702182130-06c8688daad7 // indirect
 	github.com/jessevdk/go-flags v0.0.0-20161215105708-4e64e4a4e255
 	github.com/joho/godotenv v0.0.0-20161216230537-726cc8b906e3
 	github.com/kardianos/osext v0.0.0-20170309185600-9d302b58e975
+	github.com/mitchellh/gox v0.4.0 // indirect
+	github.com/mitchellh/iochan v1.0.0 // indirect
 	github.com/olekukonko/ts v0.0.0-20140412220145-ecf753e7c962
+	github.com/omeid/go-resources v0.0.0-20171025031226-ca9993b7d1a4 // indirect
 	github.com/pkg/errors v0.0.0-20161029093637-248dadf4e906
 	github.com/pmezard/go-difflib v1.0.0
 	github.com/rdsubhas/go-elastictable v0.0.0-20170420232059-6f173a85235b
@@ -19,6 +24,9 @@ require (
 	github.com/tgulacsi/wrap v0.0.0-20160112181456-972bd931cfd1
 	github.com/tidwall/gjson v0.0.0-20170418162851-e30a9c1037e0
 	github.com/tidwall/match v0.0.0-20160830173930-173748da739a
+	github.com/yookoala/realpath v1.0.0 // indirect
 	golang.org/x/crypto v0.0.0-20170420163513-0242f07995e6
+	golang.org/x/lint v0.0.0-20180702182130-06c8688daad7 // indirect
+	golang.org/x/tools v0.0.0-20180828015842-6cd1fcedba52 // indirect
 	gopkg.in/yaml.v2 v2.0.0-20170407172122-cd8b52f8269e
 )
