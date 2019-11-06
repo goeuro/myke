@@ -1,13 +1,13 @@
 language: go
 go_import_path: github.com/omio-labs/myke
 go:
-  - 1.11
+  - 1.13
 env:
   - GO111MODULE=on
 script:
   - gofmt -d -s -e . 2>&1 | tee -a fmt.out
   - test ! -s fmt.out
-  - go run github.com/golang/lint/golint -set_exit_status .
+  - go run golang.org/x/lint/golint -set_exit_status .
   - go test -coverprofile=coverage.txt -coverpkg=github.com/omio-labs/myke/core,github.com/omio-labs/myke/cmd -covermode=atomic -timeout 10s -v ./...
   - bin/cross-compile.sh "$TRAVIS_TAG-$TRAVIS_COMMIT"
 after_success:
