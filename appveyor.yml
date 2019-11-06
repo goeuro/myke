@@ -1,6 +1,6 @@
 version: "{build}"
 os: Windows Server 2012 R2
-clone_folder: c:\gopath\src\github.com\goeuro\myke
+clone_folder: c:\gopath\src\github.com\omio-labs\myke
 
 skip_tags: true
 branches:

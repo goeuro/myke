@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/cli"
-	"github.com/goeuro/myke/core"
+	"github.com/omio-labs/myke/core"
 	"github.com/jessevdk/go-flags"
 	"io"
 	"os"

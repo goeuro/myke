@@ -1,4 +1,4 @@
-module github.com/goeuro/myke
+module github.com/omio-labs/myke
 
 require (
 	github.com/Masterminds/semver v0.0.0-20170407153603-923f129261de // indirect
@@ -36,3 +36,5 @@ require (
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/yaml.v2 v2.0.0-20170407172122-cd8b52f8269e // indirect
 )
+
+go 1.13
